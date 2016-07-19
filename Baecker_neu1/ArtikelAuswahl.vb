@@ -22,7 +22,7 @@
         ' ----> HIER PFAD ANPASSEN!!
         ' Da OpenOffice aus der Unix-Welt stammt, müssen die Windows Backslash
         ' mit der Funktion Replace in Slash umgewandelt werden
-        Dim str As String = "X:\Claudia\Baecker_neu1\abnehmen.ods"
+        Dim str As String = "Y:\Programmierung\Claudia\Baecker_neu1\Baecker_neu.ods"
         str = str.Replace("\", "/")
 
         'Die folgende Funktion bewirkt, dass das .ods Dokument nicht sichtbar ist
@@ -43,7 +43,7 @@
         ' Tabelle gewählt werden
         Dim lastZe As String = 0
 
-        oSheet = oDoc.getSheets().getByIndex(3)
+        oSheet = oDoc.getSheets().getByIndex(0)
         ' erste Zelle des Blattes. Achtung: Obere Ecke ist A1 ist (0, 0)
         ' also auch die Zellen sind 0-indiziert
         lastZe = UBound(oSheet.data)
@@ -79,18 +79,16 @@
         Dim i As Integer = 1
         For i = 1 To lastZe
             oCell = oSheet.getCellByPosition(0, i)
-            'MessageBox.Show(oCell.string)
             If oCell.String = SelectGruppe Then
                 oCell = oSheet.getCellByPosition(1, i)
                 If oCell.string = SelectArtikel Then
+                    MessageBox.Show(SelectArtikel)
                     oCell = oSheet.getCellByPosition(2, i)
                     Beschreibung.Text = oCell.string
                     oCell = oSheet.getCellByPosition(3, i)
-                    LB_Kalorien.Text = oCell.string
+                    LB_Gewicht.Text = oCell.string
                     oCell = oSheet.getCellByPosition(4, i)
-                    Fett.Text = oCell.string
-                    oCell = oSheet.getCellByPosition(5, i)
-                    Punkte.Text = oCell.string
+                    LB_Preis.Text = oCell.string
                     Exit For
                 End If
             End If

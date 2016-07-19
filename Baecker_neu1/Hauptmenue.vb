@@ -7,7 +7,7 @@
 
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        TagEingabe.ShowDialog()
+        Bestellung_neu1.ShowDialog()
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs)
         ArtikelAuswahl.ShowDialog()

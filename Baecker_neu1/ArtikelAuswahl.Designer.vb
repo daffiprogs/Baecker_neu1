@@ -23,13 +23,11 @@ Partial Class ArtikelAuswahl
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Beschreibung = New System.Windows.Forms.TextBox()
-        Me.LB_Kalorien = New System.Windows.Forms.TextBox()
-        Me.Punkte = New System.Windows.Forms.TextBox()
-        Me.Fett = New System.Windows.Forms.TextBox()
+        Me.LB_Gewicht = New System.Windows.Forms.TextBox()
+        Me.LB_Preis = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Gruppe = New System.Windows.Forms.ListBox()
@@ -39,107 +37,95 @@ Partial Class ArtikelAuswahl
         '
         'Beschreibung
         '
-        Me.Beschreibung.Location = New System.Drawing.Point(133, 150)
-        Me.Beschreibung.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Beschreibung.Location = New System.Drawing.Point(100, 122)
+        Me.Beschreibung.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Beschreibung.Multiline = True
         Me.Beschreibung.Name = "Beschreibung"
-        Me.Beschreibung.Size = New System.Drawing.Size(180, 86)
+        Me.Beschreibung.Size = New System.Drawing.Size(136, 71)
         Me.Beschreibung.TabIndex = 3
         '
-        'LB_Kalorien
+        'LB_Gewicht
         '
-        Me.LB_Kalorien.Location = New System.Drawing.Point(100, 283)
-        Me.LB_Kalorien.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.LB_Kalorien.Name = "LB_Kalorien"
-        Me.LB_Kalorien.Size = New System.Drawing.Size(180, 22)
-        Me.LB_Kalorien.TabIndex = 4
+        Me.LB_Gewicht.Location = New System.Drawing.Point(75, 230)
+        Me.LB_Gewicht.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.LB_Gewicht.Name = "LB_Gewicht"
+        Me.LB_Gewicht.Size = New System.Drawing.Size(136, 20)
+        Me.LB_Gewicht.TabIndex = 4
         '
-        'Punkte
+        'LB_Preis
         '
-        Me.Punkte.Location = New System.Drawing.Point(336, 324)
-        Me.Punkte.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Punkte.Name = "Punkte"
-        Me.Punkte.Size = New System.Drawing.Size(180, 22)
-        Me.Punkte.TabIndex = 6
-        '
-        'Fett
-        '
-        Me.Fett.Location = New System.Drawing.Point(100, 326)
-        Me.Fett.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Fett.Name = "Fett"
-        Me.Fett.Size = New System.Drawing.Size(180, 22)
-        Me.Fett.TabIndex = 5
+        Me.LB_Preis.Location = New System.Drawing.Point(75, 265)
+        Me.LB_Preis.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.LB_Preis.Name = "LB_Preis"
+        Me.LB_Preis.Size = New System.Drawing.Size(136, 20)
+        Me.LB_Preis.TabIndex = 5
+        Me.LB_Preis.Text = "0"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 283)
+        Me.Label1.Location = New System.Drawing.Point(9, 230)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(60, 17)
+        Me.Label1.Size = New System.Drawing.Size(46, 13)
         Me.Label1.TabIndex = 16
-        Me.Label1.Text = "Kalorien"
+        Me.Label1.Text = "Gewicht"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 329)
+        Me.Label2.Location = New System.Drawing.Point(9, 267)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(32, 17)
+        Me.Label2.Size = New System.Drawing.Size(30, 13)
         Me.Label2.TabIndex = 15
-        Me.Label2.Text = "Fett"
+        Me.Label2.Text = "Preis"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(15, 155)
+        Me.Label3.Location = New System.Drawing.Point(11, 126)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(95, 17)
+        Me.Label3.Size = New System.Drawing.Size(72, 13)
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "Beschreibung"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(333, 288)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(47, 17)
-        Me.Label4.TabIndex = 14
-        Me.Label4.Text = "Points"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(333, 34)
+        Me.Label5.Location = New System.Drawing.Point(250, 28)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(47, 17)
+        Me.Label5.Size = New System.Drawing.Size(36, 13)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "Artikel"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(15, 34)
+        Me.Label7.Location = New System.Drawing.Point(11, 28)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(56, 17)
+        Me.Label7.Size = New System.Drawing.Size(42, 13)
         Me.Label7.TabIndex = 12
         Me.Label7.Text = "Gruppe"
         '
         'Gruppe
         '
         Me.Gruppe.FormattingEnabled = True
-        Me.Gruppe.ItemHeight = 16
-        Me.Gruppe.Location = New System.Drawing.Point(133, 34)
-        Me.Gruppe.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Gruppe.Location = New System.Drawing.Point(100, 28)
+        Me.Gruppe.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Gruppe.Name = "Gruppe"
-        Me.Gruppe.Size = New System.Drawing.Size(120, 36)
+        Me.Gruppe.Size = New System.Drawing.Size(91, 30)
         Me.Gruppe.TabIndex = 1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(100, 394)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button1.Location = New System.Drawing.Point(75, 320)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(101, 23)
+        Me.Button1.Size = New System.Drawing.Size(76, 19)
         Me.Button1.TabIndex = 19
         Me.Button1.Text = "Schließen"
         Me.Button1.UseVisualStyleBackColor = True
@@ -147,46 +133,40 @@ Partial Class ArtikelAuswahl
         'LB_Artikel
         '
         Me.LB_Artikel.FormattingEnabled = True
-        Me.LB_Artikel.ItemHeight = 16
-        Me.LB_Artikel.Location = New System.Drawing.Point(337, 80)
-        Me.LB_Artikel.Margin = New System.Windows.Forms.Padding(4)
+        Me.LB_Artikel.Location = New System.Drawing.Point(253, 53)
         Me.LB_Artikel.Name = "LB_Artikel"
-        Me.LB_Artikel.Size = New System.Drawing.Size(159, 116)
+        Me.LB_Artikel.Size = New System.Drawing.Size(120, 108)
         Me.LB_Artikel.TabIndex = 2
         '
-        'Auswertung
+        'ArtikelAuswahl
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(555, 442)
+        Me.ClientSize = New System.Drawing.Size(416, 359)
         Me.Controls.Add(Me.LB_Artikel)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Gruppe)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.LB_Kalorien)
-        Me.Controls.Add(Me.Punkte)
-        Me.Controls.Add(Me.Fett)
+        Me.Controls.Add(Me.LB_Gewicht)
+        Me.Controls.Add(Me.LB_Preis)
         Me.Controls.Add(Me.Beschreibung)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Name = "Auswertung"
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Name = "ArtikelAuswahl"
         Me.Text = "Auswertung"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Beschreibung As TextBox
-    Friend WithEvents LB_Kalorien As TextBox
-    Friend WithEvents Punkte As TextBox
-    Friend WithEvents Fett As TextBox
+    Friend WithEvents LB_Gewicht As TextBox
+    Friend WithEvents LB_Preis As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Gruppe As ListBox
